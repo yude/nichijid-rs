@@ -16,7 +16,7 @@ RUN	cargo install cargo-license && cargo license \
 	--filter-platform "$(rustc -vV | sed -n 's|host: ||p')" \
 	> CREDITS
 
-RUN cargo build --release
+RUN cargo build --release --target=x86_64-unknown-linux-musl
 COPY src/ /usr/src/nichijid-rs/src/
 
 RUN touch src/* && cargo build --release
