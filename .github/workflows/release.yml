@@ -148,7 +148,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           tags: |
-            ghcr.io/yanorei32/nichijid-rs:${{ steps.tagname.outputs.version }}
+            ghcr.io/yude/nichijid-rs:${{ steps.tagname.outputs.version }}
 
       - name: Build and Push
         uses: docker/build-push-action@v5.0.0
@@ -160,4 +160,4 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           tags: |
-            ghcr.io/yanorei32/nichijid-rs:${{ steps.tagname.outputs.version }}
+            ghcr.io/yude/nichijid-rs:${{ steps.tagname.outputs.version }}
